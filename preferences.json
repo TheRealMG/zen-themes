@@ -1,0 +1,32 @@
+[
+  {
+    "property": "uc.mgs_ui.active_tab_outline",
+    "label": "Border around active tab",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
+    "property": "uc.mgs_ui.rounded_tabs",
+    "label": "Perfectly rounded tabs",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
+    "property": "uc.mgs_ui.toolbar_size",
+    "label": "Toolbar size",
+    "type": "string",
+    "defaultValue": "46px"
+  },
+  {
+    "property": "uc.mgs_ui.toolbar_padding",
+    "label": "Toolbar vertical padding",
+    "type": "string",
+    "defaultValue": "4px"
+  },
+  {
+    "property": "uc.mgs_ui.radius",
+    "label": "Rounding radius",
+    "type": "string",
+    "defaultValue": "5px"
+  }
+]

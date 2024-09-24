@@ -1,0 +1,33 @@
+@media (-moz-bool-pref: "zen.tabs.vertical") {
+  #urlbar-container {
+    padding-top: var(--mgs_ui-toolbar_padidng) !important;
+    padding-bottom: var(--mgs_ui-toolbar_padidng) !important;
+  }
+
+  #nav-bar {
+    min-height: var(--mgs_ui-toolbar_size) !important;
+  }
+
+  .tab-background {
+    border-radius: var(--mgs_ui-radius) !important;
+  }
+
+  #tabbrowser-tabbox {
+    border-radius: var(--mgs_ui-radius) !important;
+  }
+}
+
+/* Gives tabs an effective 100% rounding */
+@media (-moz-bool-pref: "uc.mgs_ui.rounded_tabs") {
+  .tab-background {
+    border-radius: calc(var(--tab-min-height) / 2) !important;
+  }
+}
+
+/* Gives the active tab a colored outline */
+@media (-moz-bool-pref: "uc.mgs_ui.active_tab_outline") {
+  .tabbrowser-tab:not([pinned]):is([multiselected="true"], [selected])
+    .tab-background {
+    border: 2px solid var(--zen-colors-primary) !important;
+  }
+}
