@@ -31,14 +31,12 @@
     "label": "Custom Color (Hex)",
     "type": "string", 
     "defaultValue": "#ffffff",
-    "placeholder": "#ffffff",
-    "description": "Enter a hex color code for the tab border."
+    "placeholder": "#ffffff"
   },
   {
     "property": "uc.tabs.dim_unloaded",
     "label": "Dim Unloaded Tabs",
     "type": "boolean",
-    "defaultValue": false,
-    "description": "Dim the text of tabs that are unloaded."
+    "defaultValue": false
   }
 ]
