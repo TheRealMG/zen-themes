@@ -1,6 +1,5 @@
 @media (-moz-bool-pref: "zen.tabs.vertical") {
-  /* Apply different borders based on the chosen color in preferences.json */
-  /* Default styles for predefined options */
+  /* Tab Borders Based on Preference */
   .tabbrowser-tab:not([pinned]):is([multiselected="true"], [selected]) {
     &:has(#uc-tabs[uc-tabs-preferred_color="primary"]) .tab-background {
       border: 2px solid var(--zen-colors-primary) !important;
@@ -14,27 +13,17 @@
     &:has(#uc-tabs[uc-tabs-preferred_color="border"]) .tab-background {
       border: 2px solid var(--zen-colors-border) !important;
     }
-  }
-
-  /* Custom color with fallback based on color scheme */
-  @media (prefers-color-scheme: light) {
-    .tabbrowser-tab:not([pinned]):is([multiselected="true"], [selected]):has(
-        #uc-tabs[uc-tabs-preferred_color="custom"]
-      )
-      .tab-background {
-      border: 2px solid var(--uc-tabs-preferred_color, #000000) !important; /* Fallback to black in light mode */
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    .tabbrowser-tab:not([pinned]):is([multiselected="true"], [selected]):has(
-        #uc-tabs[uc-tabs-preferred_color="custom"]
-      )
-      .tab-background {
-      border: 2px solid var(--uc-tabs-preferred_color, #ffffff) !important; /* Fallback to white in dark mode */
+    &:has(#uc-tabs[uc-tabs-preferred_color="custom"]) .tab-background {
+      @media (prefers-color-scheme: light) {
+        border: 2px solid var(--uc-tabs-preferred_color, #000000) !important; /* Fallback to black */
+      }
+      @media (prefers-color-scheme: dark) {
+        border: 2px solid var(--uc-tabs-preferred_color, #ffffff) !important; /* Fallback to white */
+      }
     }
   }
 
-  /* Background modification for tab */
+  /* Background Modification for Selected Tab */
   #tabbrowser-tabs {
     & .tabbrowser-tab {
       &[selected] .tab-background {
@@ -47,13 +36,13 @@
     }
   }
 
-  /* Dims tab text when unloaded */
+  /* Dimming Tab Text When Unloaded */
   @media (-moz-bool-pref: "uc.tabs.dim_unloaded") {
     #tabbrowser-tabs {
       & .tabbrowser-tab {
         @media (-moz-bool-pref: "zen.tabs.dim-pending") {
           &[pending="true"] .tab-text {
-            opacity: 0.5;
+            opacity: 0.5; /* Dimmed text for pending tabs */
           }
         }
       }
