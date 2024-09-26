@@ -36,7 +36,7 @@
   {
     "property": "uc.tabs.dim_unloaded",
     "label": "Dim Unloaded Tabs",
-    "type": "boolean",
+    "type": "checkbox",
     "defaultValue": false
   }
 ]
