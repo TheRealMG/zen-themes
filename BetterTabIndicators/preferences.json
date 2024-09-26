@@ -32,5 +32,12 @@
     "type": "string", 
     "default": "#ff0000",
     "description": "Enter a hex color code for the tab border."
+  },
+  {
+    "property": "uc.tabs.dim_unloaded",
+    "label": "Dim Unloaded Tabs",
+    "type": "boolean",
+    "default": false,
+    "description": "Dim the text of tabs that are unloaded."
   }
 ]
