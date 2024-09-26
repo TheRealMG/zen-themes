@@ -30,7 +30,7 @@
     "property": "uc.tabs.custom_color_hex",
     "label": "Custom Color (Hex)",
     "type": "string", 
-    "default": "#ffffff",
+    "defaultValue": "#ffffff",
     "placeholder": "#ffffff",
     "description": "Enter a hex color code for the tab border."
   },
@@ -38,7 +38,7 @@
     "property": "uc.tabs.dim_unloaded",
     "label": "Dim Unloaded Tabs",
     "type": "boolean",
-    "default": false,
+    "defaultValue": false,
     "description": "Dim the text of tabs that are unloaded."
   }
 ]
