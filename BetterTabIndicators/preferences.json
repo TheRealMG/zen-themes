@@ -30,7 +30,8 @@
     "property": "uc.tabs.custom_color_hex",
     "label": "Custom Color (Hex)",
     "type": "string", 
-    "default": "#ff0000",
+    "default": "#ffffff",
+    "placeholder": "#ffffff",
     "description": "Enter a hex color code for the tab border."
   },
   {
